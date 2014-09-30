@@ -1,8 +1,7 @@
-/*
- * Mixin for easy media queries
- * @include bp(tablet) { SCSS here };
-*/
-@mixin bp($point) {
+// Mixin for easy media queries
+// @include breakpoint(tablet) { SCSS here };
+
+@mixin breakpoint($point) {
 	@if $point == biggie {
 		@media (max-width : 1600px) { @content; }
 	}
@@ -19,15 +18,22 @@
  * @include microclearfix;
 */
 @mixin microclearfix {
-	&:before, &:after { content: ""; display: table; }
-	&:after { clear: both; }
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
 	*zoom: 1;
 }
 
-/*
- * Mixin for basic CSS triangles
- * @include triangle(up, #000, 50px)
-*/
+// Mixin for basic CSS triangles
+// @include triangle(up, #000, 50px)
+
 @mixin triangle($direction:up, $color:#000, $size:100px) {
 	@if($direction == up) {
 		border-color: transparent transparent $color;
@@ -36,6 +42,7 @@
 		height: 0;
 		width: 0;
 	}
+
 	@if($direction == down) {
 		border-color: $color transparent transparent transparent;
 		border-style: solid;
@@ -43,6 +50,7 @@
 		height:0;
 		width:0;
 	}
+
 	@if($direction == left) {
 		border-color: transparent $color transparent transparent;
 		border-style: solid;
@@ -50,6 +58,7 @@
 		height: 0;
 		width: 0;
 	}
+
 	@if($direction == right) {
 		border-color: transparent transparent transparent $color;
 		border-style: solid;
@@ -59,11 +68,9 @@
 	}
 }
 
-/*
- * @font-face mixin
- * Bulletproof font-face via Font Squirrel
- * @include fontface('family', 'assets/fonts/', 'myfontname');
- */
+// @font-face mixin
+// Bulletproof font-face via Font Squirrel
+// @include fontface('family', 'assets/fonts/', 'myfontname');
 
 @mixin fontface($font-family, $font-url, $font-name) {
 	@font-face {
