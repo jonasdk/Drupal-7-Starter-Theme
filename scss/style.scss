@@ -9,18 +9,21 @@
 
 // Compass imports
 @import 'compass';
+@import 'compass/css3';
+@import 'compass/utilities/general/clearfix';
 
 // Reset, Variables, Mixins, Etc
 // DO NOT EDIT ORDER OF FILES
-@import 'partials/mixins';
-@import 'partials/variables';
-@import 'partials/normalize';
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/normalize';
 
 // Globals
-@import 'partials/global';
+@import 'base/global';
 
-// The grid
-@import 'partials/grid';
+// The layout
+@import 'layout/grid';
+@import 'layout/typography';
 
 // Page and Site Styles
 @import 'partials/page';
@@ -30,5 +33,5 @@
 @import 'partials/forms';
 
 // Helper Classes, Print, Etc
-@import 'partials/helpers';
+@import 'base/helpers';
 @import 'partials/print';

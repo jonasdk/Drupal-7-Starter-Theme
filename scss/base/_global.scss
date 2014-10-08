@@ -100,14 +100,15 @@ textarea {
 // Box Sizing
 //
 // Set that shit to border-box, yo. And fix those pesky pseudo elements
-
+// http: //www.paulirish.com/2012/box-sizing-border-box-ftw/
 // ==========================================================================
 //   Border-box all the things!
 // ==========================================================================
-*,
-:before,
-:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+* {
+  @include box-sizing(border-box);
+
+  #admin-toolbar & {
+    @include box-sizing(content-box);
+  }
 }

@@ -1,42 +1,3 @@
-// GENERAL
-body { }
-
-a,
-a:visited {
-  color: $link-color;
-}
-
-a:hover {
-  color: $link-hover-color;
-}
-
-::-moz-selection {
-  background: $selection-color;
-  text-shadow: none;
-}
-
-::selection {
-  background: $selection-color;
-  text-shadow: none;
-}
-
-// HEADINGS / TYPOGRAPHY
-h1,
-h2,
-h3,
-h4 {
-  font-weight: normal;
-  margin: 0 0 10px;
-}
-
-h1 { }
-
-h2 { }
-
-h3 { }
-
-h4 { }
-
 // STRUCTURE
 #container {
   max-width: $page-width;
@@ -67,5 +28,5 @@ footer { }
 // Home Page
 .home { }
 
-// Blog Page 
+// Blog Page
 .blog { }
