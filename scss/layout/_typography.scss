@@ -19,6 +19,9 @@ a:focus {
   color: $link-hover-color;
 }
 
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
 ::-moz-selection {
   background: $selection-color;
   text-shadow: none;
