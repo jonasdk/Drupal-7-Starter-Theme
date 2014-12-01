@@ -5,12 +5,23 @@
   <meta charset="utf-8">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <link rel="shortcut icon" href="<?php print $directory; ?>/assets/images/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php print $directory; ?>/assets/images/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    <?php include($directory . '/inline.css'); ?>
+  </style>
+  <link rel="shortcut icon" href="<?php print $directory; ?>/images/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php print $directory; ?>/images/apple-touch-icon.png">
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <script>
+  if (window.innerWidth > 600) {
+    document.write('<link id="js-desktop-css" rel="stylesheet" href="/<?php print $directory; ?>/desktop.css" type="text/css" media="all" title="no title" charset="utf-8">');
+  }
+  </script>
+  <noscript>
+    <link id="js-desktop-css" rel="stylesheet" href="/<?php print $directory; ?>/desktop.css" type="text/css" media="all" title="no title" charset="utf-8">
+  </noscript>
 </head>
-
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <!--[if lt IE 8]>
       <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
