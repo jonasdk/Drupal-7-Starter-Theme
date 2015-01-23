@@ -1,3 +1,15 @@
+# Get started styling
+
+1) You need to have [Grunt](http://gruntjs.com/) installed, nodejs and Compass
+
+2) Go to the theme folder theme/bb/ and do a npm install to build the grunt necessary files.
+
+3) Then grunt to keep the css updated and javascript minified.
+
+## Reinstall grunt packages
+sudo rm -rf node_modules && npm cache clean && npm i
+
+
 # Drupal 7 Starter Theme
 
 Version: 3.2.0
